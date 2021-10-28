@@ -19,15 +19,24 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package dev.prabhatpandey.usefulmethodsandroid
+package dev.prabhatpandey.usefulmethodsandroid.kotlin.string
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import junit.framework.TestCase
+import junit.framework.TestCase.assertEquals
+import org.junit.Test
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
+/**
+ * Created By Prabhat Pandey for UsefulMethodsAndroid project
+ * on Thursday, 28 October, 2021 at 12:08 PM
+ */
+
+class StringUtilsTest {
+
+    @Test
+    fun shouldReturnIndianCurrencyString_WhenPassedDoubleValue() {
+        val cur = StringUtils.indianCurrencyFromDoubleWithDecimal(12345678.12)
+
+        assertEquals("1,23,45,678.12", cur)
     }
 }
