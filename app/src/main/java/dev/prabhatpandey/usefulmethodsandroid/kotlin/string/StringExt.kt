@@ -19,15 +19,25 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package dev.prabhatpandey.usefulmethodsandroid
+package dev.prabhatpandey.usefulmethodsandroid.kotlin.string
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.util.Log
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+/**
+ * Created By Prabhat Pandey for UsefulMethodsAndroid project
+ * on Thursday, 28 October, 2021 at 11:17 AM
+ */
 
+/**
+ * Returns the Double value of a valid string and
+ * returns ZERO (0.0) if the string cannot be converted to double.
+ */
+fun String.toDoubleOrZero() : Double{
+    return try {
+        if (this.isEmpty()) 0.0 else this.toDouble()
+    } catch (e: Exception) {
+        Log.d("String.toDoubleOrZero", "toDoubleOrZero: ${e.stackTrace}")
+        0.0
     }
 }
+
