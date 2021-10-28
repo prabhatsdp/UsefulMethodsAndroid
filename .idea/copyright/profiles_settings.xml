@@ -1,0 +1,8 @@
+<component name="CopyrightManager">
+  <settings default="MIT License Java/Kotlin">
+    <module2copyright>
+      <element module="All" copyright="MIT License Java/Kotlin" />
+    </module2copyright>
+    <LanguageOptions name="JAVA" />
+  </settings>
+</component>
