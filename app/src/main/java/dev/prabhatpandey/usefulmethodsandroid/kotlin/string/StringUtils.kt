@@ -60,7 +60,7 @@ object StringUtils {
     /**
      * Returns a random Base62 string of given [length]
      */
-    private fun getRandomBase62String(length: Int): String {
+    fun getRandomBase62String(length: Int): String {
         val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
         return (1..length)
             .map { allowedChars.random() }
@@ -71,7 +71,7 @@ object StringUtils {
      * Returns a random Base58 string of given [length]
      * Base58 does not use 0OIl to avoid confusion
      */
-    private fun getRandomBase58String(length: Int): String {
+    fun getRandomBase58String(length: Int): String {
         val allowedChars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
         return (1..length)
             .map { allowedChars.random() }
